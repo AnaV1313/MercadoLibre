@@ -1,82 +1,4 @@
-.kodchasan-extralight {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 200;
-    font-style: normal;
-  }
-  
-  .kodchasan-light {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .kodchasan-regular {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .kodchasan-medium, .transparente,.transparente_negro, .cambiarColor{
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  .transparente_grande{
-      font-family: "Kodchasan", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      font-size: 22px;
-      color:#9E9E9E;
-  }
-  
-  .kodchasan-semibold{
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-  }
-  
-  .kodchasan-bold{
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .kodchasan-extralight-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 200;
-    font-style: italic;
-  }
-  
-  .kodchasan-light-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .kodchasan-regular-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .kodchasan-medium-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .kodchasan-semibold-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  .kodchasan-bold-italic {
-    font-family: "Kodchasan", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
+
   body{
       font-family:"Kodchasan", Geneva, Verdana, sans-serif;
       margin: 0;
@@ -165,5 +87,9 @@
   .ocho{
       width: 100%;
       /*background-color: #2f5612; */
+  }
+  .xd{
+    font-size: 50px;
+    color: blue;
   }
   
