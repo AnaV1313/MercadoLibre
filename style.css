@@ -1,0 +1,169 @@
+.kodchasan-extralight {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .kodchasan-light {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kodchasan-regular {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kodchasan-medium, .transparente,.transparente_negro, .cambiarColor{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .transparente_grande{
+      font-family: "Kodchasan", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 22px;
+      color:#9E9E9E;
+  }
+  
+  .kodchasan-semibold{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .kodchasan-bold{
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .kodchasan-extralight-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .kodchasan-light-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .kodchasan-regular-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .kodchasan-medium-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .kodchasan-semibold-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .kodchasan-bold-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  body{
+      font-family:"Kodchasan", Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  
+  html{
+      margin: 0;
+      padding: 0;
+      height: 100%;
+  }
+  
+  .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+  
+  .content {
+      flex: 1;
+  }
+  
+  
+  /*
+  12 COLUMNAS
+  CADA COLUMNA TIENE UN TAMAÑO DE 8.33% CON RESPECTO A LA PANTALLA
+  Ya cuenta con el display tipo Flex
+  */
+  .margenes_generales{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 100px; /*Tamaño del encabezado*/
+      margin-left: 16.66%;  /*2 COLUMNAS*/
+      margin-right: 16.66%;  /*2 COLUMNAS*/
+      margin-bottom: 10px; /*Espacio Free*/
+  
+      /* border: 1px solid #ff0000; */
+  }
+  
+  /*
+  STYLES PARA DIFERENTES TAMAÑOS DE CONTAINERS
+  Ya que quitando las 4 columnas de los lados, nos quedan 8 columnas dentro
+  Cada columna tiene un tamaño de 12.5%
+  */
+  
+  .uno,.dos,.tres,.cuatro,.cinco,.seis,.siete,.ocho{
+      height: auto; /* Hace que la altura del contenedor se ajuste automáticamente al contenido */
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+  }
+  
+  .uno{
+      width: 12.5%;
+      /*background-color: #F6C708;*/
+  
+  }
+  .dos{
+      width: 25%;
+       /*background-color: #1cf608; */
+  
+  }
+  .tres{
+      width: 37.5%;
+      /*background-color: #fff700;*/
+  
+  }
+  .cuatro{
+      width: 50%;
+      /*background-color: #08a7f6;*/
+  }
+  .cinco{
+      width: 62.5%;
+      /*background-color: #f6a308; */
+  }
+  .seis{
+      width: 75%;
+      /*background-color: #f760ff; */
+  }
+  .siete{
+      width: 87.5%;
+       /*background-color: #a946fb; */
+  }
+  .ocho{
+      width: 100%;
+      /*background-color: #2f5612; */
+  }
+  
