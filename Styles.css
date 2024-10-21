@@ -35,7 +35,7 @@
       margin-top: 100px; /*Tamaño del encabezado*/
       margin-left: 16.66%;  /*2 COLUMNAS*/
       margin-right: 16.66%;  /*2 COLUMNAS*/
-      margin-bottom: 10px; /*Espacio Free*/
+      margin-bottom: 100px; /*Espacio Free*/
   
       /* border: 1px solid #ff0000; */
   }
@@ -92,4 +92,136 @@
     font-size: 50px;
     color: blue;
   }
-  
+  .column-form, .cuadro-fondo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-around;}
+   
+    .cuadro-fondo{
+
+        background-color: #FFE600; /*color amarillo mercado libre*/
+        border-radius: 2em;
+        box-shadow: 0 2px 10px #A6B49B;
+    
+    }
+    .social-login {
+        display: flex;
+        height: auto;
+        flex-wrap: wrap;
+        background-color: #faf9f2; /*blanco mercado libre*/
+        justify-content: flex-start;
+        margin-top: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px #A6B49B;
+        color:#9E9E9E;
+    }
+    .registro{
+        color: #2D3773; /*color azul mercado libre*/
+    }
+    .link{
+        font-size: .9em;
+        color: #2D3773;
+    }
+    #iniciarsesiongoogle{
+        display: flex;
+        border-radius: 2em;
+        justify-content: center;
+    }
+    #imgGoogle{
+        width: 25;
+        height: 25px;
+        margin-right: 10px;
+    }
+
+    /*PARA EL ENCABEZADO*/
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .40em;
+        background-color: #FFE600;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .logo {
+        width: 5em; /* Ajusta el tamaño según tu logo */
+    }
+
+    .search-container {
+        width: 20em;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        width: 60%;
+    }
+
+    .search-container input {
+        border: none;
+        outline: none;
+        padding: 5px;
+        width: 80em;
+    }
+
+
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+    }
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/*PARA EL FOOTER*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #2D3773;
+    border-top: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.footer-logo {
+    width: 100px; /* Ajusta el tamaño según tu logo */
+    margin-bottom: 10px; /* Espacio entre el logo y el texto */
+}
+
+.footer-text {
+    font-size: 14px; /* Tamaño de fuente para el texto */
+    color: #ffffff; /* Color del texto */
+    margin: 5px 0; /* Margen para separar las líneas */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 0; /* Espacio entre los enlaces y el texto */
+}
+
+.footer-links a {
+    margin: 0 15px; /* Espacio entre los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    color: #e9eef4; /* Color del enlace */
+}
+
+.social-icons img {
+    width: 20px; /* Tamaño de los íconos de redes sociales */
+    margin: 0 10px; /* Espacio entre los íconos */
+}
