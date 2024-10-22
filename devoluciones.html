@@ -1,16 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi emprendimiento</title>
+    <title>Formulario de Devolución</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body >
+<body>
+    <header>
+        <img src="imagenes/mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
+        
+        <div class="search-container">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="Buscar">
+        </div>
+    
+        <div>
+            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined">home</span>
+        </div>
+    </header>
 
+    <div class="margenes_generales">
+        <div class="ocho">
+            <div class="cuadro-fondo">
+                <div > <h1 class="registro">Solicitud de devolución</h1></div>
+                
+              
+                    
+                    <div class="datos">
+                        <input type="text" placeholder="Nombre" required>
+                    </div>
+                    <div class="datos">
+                        <input type="text" placeholder="Apellido" required>
+                    </div>
+                    <div class="datos">
+                        <input type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="datos">
+                        <input type="text" placeholder="Número de Pedido" required>
+                    </div>
+                    <div class="datos">
+                        <input type="date" placeholder="Fecha de Compra" required>
+                    </div>
+                    <div class="datos">
+                        <label for="motivo">Motivo de la Devolución:</label>
+                        <select id="motivo" required>
+                            <option value="" disabled selected>Seleccione un motivo</option>
+                            <option value="producto_dañado">Producto Dañado</option>
+                            <option value="no_conforme">No Conforme</option>
+                            <option value="error_en_envio">Error en el Envío</option>
+                            <option value="cambio_de_idea">Cambio de Idea</option>
+                        </select>
+                    </div>
+                    <div class="datos">
+                        <textarea placeholder="Comentarios Adicionales" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="save-button">Enviar Solicitud</button>
+                </form>
+                <p></p>
+            </div>
+        </div>
+    </div> <!-- fin margenes generales-->
+
+    <footer>
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        
+        <div class="footer-links">
+            <a href="#politicas">Políticas de Privacidad</a>
+            <a href="#terminos">Términos y Condiciones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    
+        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+    </footer>
 </body>
 </html>

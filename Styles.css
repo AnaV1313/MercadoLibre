@@ -106,21 +106,26 @@
     
     }
     .social-login, .datos {
-
         display: flex;
         height: auto;
         flex-wrap: wrap;
-        background-color: #faf9f2; /*blanco mercado libre*/
+        background-color: #faf9f2; /* blanco mercado libre */
         justify-content: flex-start;
         margin-top: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 10px;
-        padding-right: 15px;
+        padding: 10px; /* Padding unificado */
         border-radius: 10px;
         box-shadow: 0 2px 4px #A6B49B;
-        color:#9E9E9E;
+        color: #9E9E9E;
     }
+    /* Estilos adicionales para el textarea */
+    textarea {
+        width: 100%; /* Ocupa todo el ancho del recuadro */
+        resize: vertical; /* Permitir redimensionar verticalmente */
+        border: 1px solid #ccc; /* Borde para el textarea */
+        border-radius: 5px; /* Bordes redondeados */
+        padding: 10px; /* Espaciado interno */
+    }
+    
 .datos{
     width: 80%;
 }
@@ -131,6 +136,7 @@
     }
     .registro{
         color: #2D3773; /*color azul mercado libre*/
+        width: 100%;
     }
     .link{
         font-size: .9em;
@@ -238,7 +244,7 @@ footer {
 /*INGRESO DE DATOS*/
 .save-button {
     margin-top: 20px;
-    width:30%;
+    width:wrap;
     background-color: #2D3773; /* Color de fondo verde */
     color: white; /* Color del texto */
     border: none; /* Sin borde */
