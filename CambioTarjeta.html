@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,9 +7,8 @@
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
 </head>
 <body >
     <header>
@@ -33,46 +31,35 @@
         </div>
     </header>
 
+    
+    
+
+    <!-- Contenido principal -->
     <div class="margenes_generales">
-        <div class="uno"></div>
+        <!-- Contenedor de la sección de pagos -->
         <div class="seis">
             <div class="cuadro-fondo">
-                <div > <h1 class="registro">Regístrate</h1></div>
+                <h1 class="registro">Nueva Tarjeta</h1>
                 <div class="social-login">
-                    E-mail
+                    <label for="card-number">Número de Tarjeta:</label>
+                    <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
                 </div>
                 <div class="social-login">
-                    Contraseña
-                </div>  
-
-                <div> <p> </p></div>
-                <a href="cambiodatos.html">
-                    <div class="link"> Continuar</div>
-                </a>
-                <p> ó </p>
-                
-                <button id="iniciarsesiongoogle">
-                    <img src="imagenes\Google__G__logo.svg.webp" alt="Google" id="imgGoogle">
-                    Inicia sesión con Google
-                </button>
-                <p>
-                    ¿Ya tienes una cuenta? 
-                    <a href="#" class="link">
-                    Inicia sesión aquí
-                    </a>
-                </p>
-                
+                    <label for="expiry-date">Fecha de Expiración:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/AA">
+                </div>
+                <div class="social-login">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" id="cvv" placeholder="XXX">
+                </div>
+                <button class="save-button">Guardar</button>
             </div>
-
         </div>
-    
-        <div class="uno"></div>
-      
-  
-    </div> <!-- fin margenes generales-->
+    </div>
 
+    <!-- Footer -->
     <footer>
-        <img src="imagenes\MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
         
         <div class="footer-links">
             <a href="#politicas">Políticas de Privacidad</a>

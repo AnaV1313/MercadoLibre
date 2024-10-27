@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+<body >
+    <header>
+        <img src="imagenes\mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
+        
+        <div class="search-container">
+            <span class="material-symbols-outlined">
+                search
+                </span>
+            <input type="text" placeholder="Buscar">
+        </div>
+    
+        <div>
+            <span class="material-symbols-outlined">
+                person
+                </span>
+            <span class="material-symbols-outlined">
+                home
+                </span>
+        </div>
+    </header>
+
+
+    <div class="pse-container">
+        <h3>Selecciona el banco</h3>
+        <div class="bank-list">
+            <label>
+                <input type="radio" name="bank" value="alianza">
+                <span>ALIANZA FIDUCIARIA S.A.</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="av-villas">
+                <span>AV Villas</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="bancamia">
+                <span>BANCO DE LAS MICROFINANZAS BANCAMIA</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="bogota">
+                <span>Banco de Bogotá</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="banagrario">
+                <span>Banco Agrario</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="bancolombia">
+                <span>Bancolombia</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="bbva">
+                <span>BBVA Colombia</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="davivienda">
+                <span>Davivienda</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="colpatria">
+                <span>Scotiabank Colpatria</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="itau">
+                <span>Itaú</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="coopcentral">
+                <span>Banco Cooperativo Coopcentral</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="falabella">
+                <span>Banco Falabella</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="serfinanza">
+                <span>Banco Serfinanza</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="omegacapital">
+                <span>Banco Omega Capital</span>
+            </label>
+            <label>
+                <input type="radio" name="bank" value="gnb-sudameris">
+                <span>Banco GNB Sudameris</span>
+            </label>
+        </div>
+    
+        <div class="pse-buttons">
+            <a href="Pago.html" class="back-button">Volver</a>
+            <button class="modal-confirm-button" onclick="confirmPurchase()">Continuar</button>
+        </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Nombre del Sitio. Todos los derechos reservados.</p>
+        <nav>
+            <ul>
+                <li><a href="politica.html">Política de Privacidad</a></li>
+                <li><a href="terminos.html">Términos de Servicio</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        function confirmPurchase() {
+            // Acción de confirmación del pago
+            window.location.href = "FinalizarPago.html"; // Cambia esta URL a la página de confirmación
+        }
+    </script>
+  <!-- Footer -->
+  <footer>
+    <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+    
+    <div class="footer-links">
+        <a href="#politicas">Políticas de Privacidad</a>
+        <a href="#terminos">Términos y Condiciones</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+</footer>
+</body>
+</html>
