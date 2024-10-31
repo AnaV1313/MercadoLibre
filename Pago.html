@@ -12,7 +12,7 @@
 </head>
 <body>
     <header>
-        <img src="imagenes/mercado-libre.webp" alt="Logo" class="logo">
+        <img src="imagenes/mercado-libre.webp" alt="Logo" class="logo"> 
         <div class="search-container">
             <span class="material-symbols-outlined">search</span>
             <input type="text" placeholder="Buscar">
@@ -27,32 +27,32 @@
         <div class="payment-options">
             <h2>Elige cómo pagar</h2>
             <div class="option">
-                <input type="radio" name="payment-method" id="debit-card" value="Tarjeta de Débito">
+                <input type="radio" name="payment-method" id="debit-card" value="debit" onclick="setPaymentMethod('debit')">
                 <img src="imagenes/Tarjeta.png" alt="Tarjeta de Débito">
                 <label for="debit-card">Nueva tarjeta de débito</label>
             </div>
             <div class="option">
-                <input type="radio" name="payment-method" id="credit-card" value="Tarjeta de Crédito">
+                <input type="radio" name="payment-method" id="credit-card" value="credit" onclick="setPaymentMethod('credit')">
                 <img src="imagenes/Tarjeta.png" alt="Tarjeta de Crédito">
                 <label for="credit-card">Nueva tarjeta de crédito</label>
             </div>
             <div class="option">
-                <input type="radio" name="payment-method" id="pse" value="PSE">
+                <input type="radio" name="payment-method" id="pse" value="pse" onclick="setPaymentMethod('pse')">
                 <img src="imagenes/pse.png" alt="PSE">
                 <label for="pse">Transferencia con PSE</label>
             </div>
             <div class="option">
-                <input type="radio" name="payment-method" id="efecty" value="Efecty">
+                <input type="radio" name="payment-method" id="efecty" value="efecty" onclick="setPaymentMethod('efecty')">
                 <img src="imagenes/efecty.png" alt="Efecty">
                 <label for="efecty">Efecty</label>
             </div>
             <div class="option">
-                <input type="radio" name="payment-method" id="nequi" value="Nequi">
+                <input type="radio" name="payment-method" id="nequi" value="nequi" onclick="setPaymentMethod('nequi')">
                 <img src="imagenes/nequi.png" alt="Nequi">
                 <label for="nequi">Nequi</label>
             </div>
             <div class="option">
-                <input type="radio" name="payment-method" id="daviplata" value="Daviplata">
+                <input type="radio" name="payment-method" id="daviplata" value="daviplata" onclick="setPaymentMethod('daviplata')">
                 <img src="imagenes/daviplata.png" alt="Daviplata">
                 <label for="daviplata">Daviplata</label>
             </div>
@@ -66,38 +66,54 @@
             <div class="total">Total: $ 65.805</div>
             <div class="button-container">
                 <button class="button cancel" onclick="redirectToCancelPage()">Cancelar</button>
-                <button class="button" onclick="redirectToContinuePage()">Continuar</button>
+                <button class="button" onclick="continueToPayment()">Continuar</button>
             </div>
         </div>
     </div>
 
     <script>
-        function redirectToCancelPage() {
-            window.location.href = "Perfil.html"; // Página a la que redirige al hacer clic en "Cancelar"
+        let selectedPaymentMethod = '';
+
+        function setPaymentMethod(method) {
+            selectedPaymentMethod = method;
         }
 
-        function redirectToContinuePage() {
-            const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
-            let selectedMethod;
-            for (const method of paymentMethods) {
-                if (method.checked) {
-                    selectedMethod = method.value;
-                    break;
-                }
-            }
-            window.location.href = `FinalizarPago.html?paymentMethod=${encodeURIComponent(selectedMethod)}`; // Pasar el método de pago a la página
+        function continueToPayment() {
+    // Aquí se asume que selectedPaymentMethod se establece en algún lugar del código antes de esta función
+    if (selectedPaymentMethod === 'pse') {
+        localStorage.setItem('paymentMethod', 'pse');
+        window.location.href = "PagoPSE.html"; // Redirige a PSE
+    } else if (selectedPaymentMethod === 'debit' || selectedPaymentMethod === 'credit') {
+        localStorage.setItem('paymentMethod', selectedPaymentMethod);
+        window.location.href = "CambioTarjeta.html"; // Redirige a Tarjeta
+    } else if (selectedPaymentMethod === 'efecty') {
+        localStorage.setItem('paymentMethod', 'efecty');
+        window.location.href = "PagoEfecty.html"; // Redirige a Efecty
+    } else if (selectedPaymentMethod === 'nequi') {
+        localStorage.setItem('paymentMethod', 'nequi');
+        window.location.href = "PagoNequi.html"; // Redirige a Nequi
+    } else if (selectedPaymentMethod === 'daviplata') {
+        localStorage.setItem('paymentMethod', 'daviplata');
+        window.location.href = "PagoDaviplata.html"; // Redirige a Daviplata
+    } else {
+        console.error('Método de pago no válido'); // Manejo de errores
+    }
+}
+
+
+        function redirectToCancelPage() {
+            window.location.href = "Perfil.html"; 
         }
     </script>
 
-    <!-- Footer -->
     <footer>
-        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> 
         <div class="footer-links">
             <a href="#politicas">Políticas de Privacidad</a>
             <a href="#terminos">Términos y Condiciones</a>
             <a href="#contacto">Contacto</a>
         </div>
-        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> 
     </footer>
 </body>
 </html>

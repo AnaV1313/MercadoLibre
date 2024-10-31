@@ -3,43 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre</title>
+    <title>Confirmación de Compra - Mercado Libre</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
 </head>
-<body >
+<body>
     <header>
-        <img src="imagenes\mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
+        <img src="imagenes/mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
         
         <div class="search-container">
-            <span class="material-symbols-outlined">
-                search
-                </span>
+            <span class="material-symbols-outlined">search</span>
             <input type="text" placeholder="Buscar">
         </div>
     
         <div>
-            <span class="material-symbols-outlined">
-                person
-                </span>
-            <span class="material-symbols-outlined">
-                home
-                </span>
+            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined">home</span>
         </div>
     </header>
-<body>
+
     <div class="container">
         <!-- Información de la Compra -->
         <div class="purchase-info">
+            <h1>¡Compra Confirmada!</h1>
             <div class="section">
                 <h3>Dirección de Envío</h3>
                 <p>Calle 45A Sur #72-80</p>
                 <p>La estrella - Kennedy, Bogotá D.C.</p>
-                <a href="#" class="modify-link">Editar o elegir otro</a>
+                <p>Tu compra llegará el <strong>lunes 6 de noviembre</strong>.</p>
             </div>
 
             <div class="section">
@@ -49,7 +43,7 @@
                     <strong>Envío 1</strong>
                     <p>Llega el lunes a tu domicilio</p>
                     <div class="product">
-                        <img src="imagenes\producto.png" alt="Osito Cariñosito">
+                        <img src="imagenes/producto.png" alt="Osito Cariñosito">
                         <div class="product-info">
                             <p>Ositos Cariñositos Azul Gruñón Calidad Premium 40cm + 3 globos</p>
                             <p>Cantidad: 1 | Color: Azul</p>
@@ -64,9 +58,8 @@
                 <div class="payment-details">
                     <div class="payment-method">
                         <p>Método de Pago Seleccionado: <span id="payment-method"></span></p>
-                        <p>Transfiere $65.805</p>
-                        <p>No demores en pagar, solo podemos reservarte stock cuando el pago se acredite</p>
-                        <a href="#" class="modify-link">Modificar</a>
+                        <p>Transfiere <strong>$65.805</strong></p>
+                        <p>No demores en pagar, solo podemos reservarte stock cuando el pago se acredite.</p>
                     </div>
                     <div class="user-details">
                         <strong>Laura Penagos</strong>
@@ -83,41 +76,32 @@
             <p>Producto: <strong>$56.905</strong></p>
             <p>Envío: <strong>$8.900</strong></p>
             <p>Total: <strong>$65.805</strong></p>
-            <button class="confirm-button" onclick="confirmPurchase()">Confirmar compra</button>
+            <button class="confirm-button" onclick="goToHomePage()">Volver al Inicio</button> <!-- Botón para volver al inicio -->
         </div>
     </div>
 
     <script>
-
-          // Obtener el método de pago de localStorage
-          const paymentMethod = localStorage.getItem('paymentMethod');
+        // Obtener el método de pago de localStorage
+        const paymentMethod = localStorage.getItem('paymentMethod');
         document.getElementById('payment-method').innerText = paymentMethod ? paymentMethod : 'No se ha seleccionado ningún método de pago';
-        // Llamar a la función al cargar la página
-        window.onload = displayPaymentMethod;
 
-        // Función para finalizar el pago
-        function finalizePayment() {
-            // Aquí iría la lógica para finalizar el pago
-            alert('Pago finalizado exitosamente.');
-        }
-        function confirmPurchase() {
-            window.location.href = "CompraFinal.html"; // Cambia esta URL a la página de confirmación
+        // Función para redirigir al usuario al inicio
+        function goToHomePage() {
+            window.location.href = "index.html"; // Cambia esta URL a tu página de inicio
         }
     </script>
 
-    
- <!-- Footer -->
- <footer>
-    <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
-    
-    <div class="footer-links">
-        <a href="#politicas">Políticas de Privacidad</a>
-        <a href="#terminos">Términos y Condiciones</a>
-        <a href="#contacto">Contacto</a>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        
+        <div class="footer-links">
+            <a href="#politicas">Políticas de Privacidad</a>
+            <a href="#terminos">Términos y Condiciones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
 
-    <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
-</footer>
+        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+    </footer>
 </body>
 </html>
-

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre</title>
+    <title>Pago Efecty - Mercado Libre</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,18 +30,18 @@
         <!-- Contenedor de la sección de pagos -->
         <div class="seis">
             <div class="cuadro-fondo">
-                <h1 class="registro">Nueva Tarjeta</h1>
+                <h1 class="registro">Pago con Efecty</h1>
                 <div class="social-login">
-                    <label for="card-number">Número de Tarjeta:</label>
-                    <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    <label for="reference-number">Número de Referencia:</label>
+                    <input type="text" id="reference-number" placeholder="XXXX-XXXX-XXXX">
                 </div>
                 <div class="social-login">
-                    <label for="expiry-date">Fecha de Expiración:</label>
-                    <input type="text" id="expiry-date" placeholder="MM/AA">
+                    <label for="recipient-name">Nombre del Beneficiario:</label>
+                    <input type="text" id="recipient-name" placeholder="Nombre completo">
                 </div>
                 <div class="social-login">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" placeholder="XXX">
+                    <label for="amount">Monto a Pagar:</label>
+                    <input type="text" id="amount" placeholder="Monto en pesos">
                 </div>
                 <button class="save-button" onclick="saveAndContinue()">Guardar y Continuar</button>
             </div>

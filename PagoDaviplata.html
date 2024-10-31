@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre</title>
+    <title>Pago Daviplata</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,31 +27,39 @@
 
     <!-- Contenido principal -->
     <div class="margenes_generales">
-        <!-- Contenedor de la sección de pagos -->
         <div class="seis">
             <div class="cuadro-fondo">
-                <h1 class="registro">Nueva Tarjeta</h1>
+                <h1 class="registro">Pago con Daviplata</h1>
                 <div class="social-login">
-                    <label for="card-number">Número de Tarjeta:</label>
-                    <input type="text" id="card-number" placeholder="XXXX-XXXX-XXXX-XXXX">
+                    <label for="daviplata-phone">Número de Celular Daviplata:</label>
+                    <input type="text" id="daviplata-phone" placeholder="Ej: 3001234567">
                 </div>
                 <div class="social-login">
-                    <label for="expiry-date">Fecha de Expiración:</label>
-                    <input type="text" id="expiry-date" placeholder="MM/AA">
+                    <label for="daviplata-amount">Monto a Pagar:</label>
+                    <input type="text" id="daviplata-amount" placeholder="Ej: $50,000">
                 </div>
-                <div class="social-login">
-                    <label for="cvv">CVV:</label>
-                    <input type="text" id="cvv" placeholder="XXX">
-                </div>
-                <button class="save-button" onclick="saveAndContinue()">Guardar y Continuar</button>
+                <button class="save-button" onclick="processDaviplataPayment()">Realizar Pago</button>
             </div>
         </div>
     </div>
 
     <script>
-        function saveAndContinue() {
-            // Aquí puedes agregar lógica para guardar los datos necesarios antes de continuar
-            window.location.href = "FinalizarPago.html"; // Redirige a la página deseada
+        function processDaviplataPayment() {
+            const phoneNumber = document.getElementById('daviplata-phone').value;
+            const amount = document.getElementById('daviplata-amount').value;
+
+            // Aquí puedes agregar lógica para procesar el pago con Daviplata
+            // Por ejemplo, verificar que el número de teléfono y el monto sean válidos
+
+            // Si los datos son válidos, puedes redirigir a una página de confirmación
+            if (phoneNumber && amount) {
+                localStorage.setItem('paymentMethod', 'daviplata');
+                localStorage.setItem('daviplataPhone', phoneNumber);
+                localStorage.setItem('daviplataAmount', amount);
+                window.location.href = "FinalizarPago.html"; // Redirige a la página de confirmación
+            } else {
+                alert('Por favor, completa todos los campos.'); // Mensaje de error
+            }
         }
     </script>
 
