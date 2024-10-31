@@ -63,7 +63,7 @@
                 <h3>Detalle del Pago</h3>
                 <div class="payment-details">
                     <div class="payment-method">
-                        <strong>Banco de Bogotá</strong>
+                        <p id="selected-payment-method"></p>
                         <p>Transfiere $65.805</p>
                         <p>No demores en pagar, solo podemos reservarte stock cuando el pago se acredite</p>
                         <a href="#" class="modify-link">Modificar</a>
@@ -88,6 +88,28 @@
     </div>
 
     <script>
+
+          // Función para obtener el método de pago de la URL
+          function getPaymentMethod() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('paymentMethod');
+        }
+
+        // Mostrar el método de pago seleccionado
+        function displayPaymentMethod() {
+            const paymentMethod = getPaymentMethod();
+            const paymentMethodElement = document.getElementById('selected-payment-method');
+            paymentMethodElement.textContent = paymentMethod ? paymentMethod : 'No se seleccionó ningún método de pago.';
+        }
+
+        // Llamar a la función al cargar la página
+        window.onload = displayPaymentMethod;
+
+        // Función para finalizar el pago
+        function finalizePayment() {
+            // Aquí iría la lógica para finalizar el pago
+            alert('Pago finalizado exitosamente.');
+        }
         function confirmPurchase() {
             window.location.href = "confirmation-page.html"; // Cambia esta URL a la página de confirmación
         }

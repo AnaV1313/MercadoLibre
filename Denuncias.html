@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <img src="imagenes/mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
+        
+        <div class="search-container">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+            <input type="text" placeholder="Buscar">
+        </div>
+    
+        <div>
+            <span class="material-symbols-outlined">person</span>
+            <span class="material-symbols-outlined">home</span>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <header>
+            <h1>Denuncias</h1>
+        </header>
+
+        <main class="content">
+            <div class="denuncias-container">
+                <h2>Formulario de Denuncias</h2>
+                <p>Si has tenido algún problema o deseas reportar una situación, completa el siguiente formulario:</p>
+
+                <form id="denunciaForm" action="#" method="post" class="denuncia-form">
+                    <!-- Información de contacto -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <!-- Tipo de denuncia -->
+                    <div class="form-group">
+                        <label for="tipo-denuncia">Tipo de Denuncia:</label>
+                        <select id="tipo-denuncia" name="tipo-denuncia" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="fraude">Fraude</option>
+                            <option value="producto-defectuoso">Producto defectuoso</option>
+                            <option value="estafa">Estafa</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Descripción de la denuncia -->
+                    <div class="form-group">
+                        <label for="descripcion">Descripción:</label>
+                        <textarea id="descripcion" name="descripcion" rows="5" placeholder="Describe la situación con detalles" required></textarea>
+                    </div>
+
+                    <!-- Opcional: Archivos adjuntos -->
+                    <div class="form-group">
+                        <label for="archivo">Adjuntar Archivos (opcional):</label>
+                        <input type="file" id="archivo" name="archivo" multiple>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <div class="button-container">
+                        <button type="submit" class="submit-button">Enviar Denuncia</button>
+                    </div>
+                </form>
+
+                <!-- Notificación de confirmación -->
+                <div id="notificacion" class="notification" style="display: none;">
+                    <span class="close" id="closeBtn">&times;</span>
+                    <span class="notification-text">¡Denuncia enviada exitosamente!</span>
+                    <button id="aceptarBtn">Aceptar</button>
+                </div>
+                <div class="overlay" style="display: none;"></div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript directo en el HTML -->
+    <script>
+        document.getElementById("denunciaForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario
+
+            // Muestra la notificación
+            document.getElementById("notificacion").style.display = "flex";
+            document.querySelector(".overlay").style.display = "block";
+        });
+
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            // Oculta la notificación y el fondo de superposición
+            document.getElementById("notificacion").style.display = "none";
+            document.querySelector(".overlay").style.display = "none";
+        });
+
+        document.getElementById("aceptarBtn").addEventListener("click", function() {
+            // Oculta la notificación y redirige a otra página
+            document.getElementById("notificacion").style.display = "none";
+            document.querySelector(".overlay").style.display = "none";
+            window.location.href = "Perfil.html"; // Cambia "Perfil.html" por la URL de destino
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        
+        <div class="footer-links">
+            <a href="#politicas">Políticas de Privacidad</a>
+            <a href="#terminos">Términos y Condiciones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+    
+        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+    </footer>
+</body>
+</html>

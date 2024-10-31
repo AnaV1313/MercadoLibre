@@ -41,3 +41,4 @@ function closeNotification() {
     // Cierra la notificación
     document.getElementById("notification").style.display = "none";
 }
+

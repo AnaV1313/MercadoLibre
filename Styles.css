@@ -515,6 +515,10 @@ h2{
 }
 
 .notification {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center;
+    align-items: center; /* Centra el contenido */
     border: none;
     color: #ffffff; /* Color del texto */
     padding: 15px; /* Espaciado interno */
@@ -542,4 +546,84 @@ h2{
 .notification-text {
     margin-left: 15px; /* Espacio superior para separar el texto de la X */
     
+    
+}
+
+/* Contenedor de la página de denuncias */
+.denuncias-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #faf9f2;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.denuncias-container h2 {
+    color: #2D3773;
+    font-size: 1.8em;
+    margin-bottom: 10px; /* Ajusta el espacio entre el título y el párrafo */
+}
+
+.denuncias-container p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1em;
+}
+
+
+
+/* Estilos del formulario */
+.denuncia-form .form-group {
+    margin-bottom: 15px;
+}
+
+.denuncia-form label {
+    display: block;
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.denuncia-form input[type="text"],
+.denuncia-form input[type="email"],
+.denuncia-form select,
+.denuncia-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.denuncia-form textarea {
+    resize: vertical;
+}
+
+.denuncia-form input[type="file"] {
+    margin-top: 5px;
+}
+
+
+/* Botón de envío */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-button {
+    background-color: #2D3773;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #6572b9;
 }
