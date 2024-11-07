@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil de Usuario - Mercado Libre</title>
+    <title>Mercado Libre</title>
     <link rel="stylesheet" href="Styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
 </head>
-<body>
+<body >
     <header>
         <img src="imagenes\mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
         
@@ -40,56 +41,72 @@
         </div>
     </header>
 
+    <!-- Contenido principal con la barra lateral y la columna de perfil -->
     <div class="container">
-        <h1>Perfil de Usuario</h1>
-        <div class="profile-info">
-            <div class="section">
-                <h3>Información Personal</h3>
-                <p><strong>Nombre:</strong> Laura Penagos</p>
-                <p><strong>Correo Electrónico:</strong> laura.penagos@vamosapasargerencia.com</p>
-                <p><strong>Teléfono:</strong> +57 300 123 4567</p>
-                <a href="cambiodatos.html" class="modify-link">Editar Información</a>
-            </div>
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <h2>Menú</h2>
+            <a href="#"><span>📦</span> <span>Compras</span></a>
+        <a href="#"><span>📈</span> <span>Ventas</span></a>
+        <a href="#"><span>📅</span> <span>Suscripciones</span></a>
+        <a href="#"><span>💳</span> <span>Facturación</span></a>
+        <a href="#"><span>⚙️</span> <span>Configuración</span></a>
+        </aside>
 
-            <div class="section">
-                <h3>Dirección de Envío</h3>
-                <p>Calle 45A Sur #72-80</p>
-                <p>La estrella - Kennedy, Bogotá D.C.</p>
-                <a href="#" class="modify-link">Modificar Dirección</a>
-            </div>
+        <!-- Columna principal -->
+        <main class="main-content">
+            <section class="profile-header">
+                <div class="avatar">LP</div>
+                <div>
+                    <h1>Laura Penagos</h1>
+                <p>laura.penagos@vamosapasargerencia.com</p>
+                <p>Estás en nivel 1 - Mercado Puntos</p>
+                </div>
+            </section>
 
-            <div class="section">
+            <section class="profile-section">
+                <h3>Datos de tu cuenta</h3>
+            <p><span class="icon">👤</span> Datos que representan a la cuenta en Mercado Libre y Mercado Pago.</p>
+            <a href="cambiodatos.html" class="edit-link">Editar</a>
+            </section>
+
+            <section class="profile-section">
                 <h3>Historial de Compras</h3>
-                <ul>
-                    <li>
-                        <p><strong>Ositos Cariñositos Azul Gruñón</strong> - $56.905</p>
-                        <p>Fecha: 01 de noviembre de 2023</p>
-                    </li>
-                    <li>
-                        <p><strong>Pelota Inflable</strong> - $25.000</p>
-                        <p>Fecha: 15 de octubre de 2023</p>
-                    </li>
-                </ul>
-                <a href="#" class="modify-link">Ver Todas las Compras</a>
-            </div>
-        </div>
+                <p>No tienes compras recientes.</p>
+            </section>
+
+            <section class="profile-section">
+                <h3>Denuncias</h3>
+                <p><span class="icon">⚠️</span> Aquí encontrarás las opciones para gestionar tus denuncias.</p>
+                <a href="Denuncias.html" class="edit-link">Ir</a>
+            </section>
+
+            <section class="profile-section">
+                <h3>Devoluciones</h3>
+            <p><span class="icon">🔄</span> Opciones para ver y gestionar tus devoluciones.</p>
+            <a href="devoluciones.html" class="edit-link">Editar</a>
+            </section>
+
+            <section class="profile-section">
+                <h3>Verificación de Identidad</h3>
+                <p><span class="icon">🆔</span> Verifica tu identidad para aumentar la seguridad de tu cuenta.</p>
+                <a href="#" class="edit-link">Editar</a>
+        </main>
     </div>
 
-    <script>
-        // Aquí puedes agregar funcionalidades adicionales si es necesario
-    </script>
+  <!-- Footer -->
+  <footer>
+    <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+    
+    <div class="footer-links">
+        <a href="#politicas">Políticas de Privacidad</a>
+        <a href="#terminos">Términos y Condiciones</a>
+        <a href="#contacto">Contacto</a>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
-        
-        <div class="footer-links">
-            <a href="#politicas">Políticas de Privacidad</a>
-            <a href="#terminos">Términos y Condiciones</a>
-            <a href="#contacto">Contacto</a>
-        </div>
+    <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+</footer>
+</div>
 
-        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
-    </footer>
 </body>
 </html>
