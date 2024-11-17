@@ -92,19 +92,31 @@
   text-decoration: none;
   color:black;
   }
+
   .column-form, .cuadro-fondo {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-content: space-around;}
-   
-    .cuadro-fondo{
+    align-items: center; /* Alinea los elementos horizontalmente al centro */
+    justify-content: center; /* Alinea los elementos verticalmente en el centro */
+}
 
-        background-color: #FFE600; /*color amarillo mercado libre*/
-        border-radius: 1em;
-        box-shadow: 0 2px 10px #A6B49B;
-    
-    }
+.cuadro-fondo {
+    background-color: #FFE600; /* color amarillo mercado libre */
+    border-radius: 1em;
+    box-shadow: 0 2px 10px #A6B49B;
+    width: 90%; /* Ancho del cuadro de fondo */
+    max-width: 400px; /* Ancho máximo para que no se expanda demasiado */
+    margin: 20px auto; /* Centra el cuadro de fondo y añade un margen superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    text-align: center; /* Alinea el texto al centro */
+}
+h1, p, a {
+    text-align: center; /* Alinea el texto al centro */
+    width: 100%; /* Asegura que el ancho sea del 100% para centrar correctamente */
+}
+
     .social-login, .datos {
         display: flex;
         height: auto;
@@ -143,14 +155,16 @@
         color: #2D3773;
         background: none;
         border: none;
-        text-decoration: underline
-        ;
+        text-decoration: underline;
         
     }
-    #iniciarsesiongoogle{
+    #iniciarsesiongoogle {
         display: flex;
-        border-radius: 2em;
-        justify-content: center;
+        align-items: center; /* Centra verticalmente el contenido del botón */
+        justify-content: center; /* Centra horizontalmente el contenido del botón */
+        padding: 8px; /* Espaciado interno */
+        border-radius: 2em; /* Bordes redondeados */
+        margin: 10px 50px 10px; /* Espaciado entre el botón y otros elementos */
     }
     #imgGoogle{
         width: 25;
