@@ -46,32 +46,34 @@
         <div class="uno"></div>
         <div class="seis">
             <div class="cuadro-fondo">
-                <div > <h1 class="registro">Regístrate</h1></div>
-                <div class="social-login">
-                  
-                    <input type="text" placeholder="  E-mail">
+                <div>
+                    <h1 class="registro">Regístrate</h1>
                 </div>
-                <div class="social-login">
-                    <input type="text" placeholder=" Contraseña">
-                </div>  
-
-                <div> <p> </p></div>
-                <a href="Perfil.html">
-                    <div class="link"> Continuar</div>
-                </a>
-                <p> ó </p>
-                
-                <button id="iniciarsesiongoogle">
-                    <img src="imagenes\Google__G__logo.svg.webp" alt="Google" id="imgGoogle">
-                    Inicia sesión con Google
-                </button>
-                <p>
-                    ¿Ya tienes una cuenta? 
-                    <a href="#" class="link">
-                    Inicia sesión aquí
-                    </a>
-                </p>
-                
+                <form action="Perfil.html" method="POST">
+                    <div class="social-login">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="social-login">
+                        <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    </div>
+            
+                    <div>
+                        <p></p>
+                    </div>
+                    <div>
+                        <button type="submit" class="link" >Continuar</button>
+                    </div>
+                    <p> ó </p>
+            
+                    <button id="iniciarsesiongoogle">
+                        <img src="imagenes/Google__G__logo.svg.webp" alt="Google" id="imgGoogle">
+                        Inicia sesión con Google
+                    </button>
+                    <p>
+                        ¿Ya tienes una cuenta?
+                        <a href="#" class="link">Inicia sesión aquí</a>
+                    </p>
+                </form>
             </div>
 
         </div>

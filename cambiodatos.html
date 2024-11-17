@@ -41,65 +41,114 @@
            
         </div>
     </header>
-
     <div class="margenes_generales">
-      
         <div class="ocho">
             <div class="cuadro-fondo">
-                <div > <h1 class="registro">Mis datos</h1></div>
-                
-                <div class="datos">
-                    <input type="text" placeholder="Nombre">
+                <div>
+                    <h1 class="registro">Mis datos</h1>
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="Apellido">
+                    <input type="text" placeholder="Laura">
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="E-mail">
+                    <input type="text" placeholder="Penagos">
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="Contraseña">
-                </div>
-               
-                <div class="datos">
-                    <input type="text" placeholder="+57 Telefono">
+                    <input type="email" id="email" placeholder="laura.penagos@vamosapasargerencia.com"> <!-- Cambiado a type="email" -->
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="Cédula">
+                    <input type="text" placeholder="Cambiar contraseña">
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="Región">
+                    <input type="text" placeholder="+57 3022182724">
                 </div>
                 <div class="datos">
-                    <input type="text" placeholder="Dirección">
+                    <input type="text" placeholder="1000286840">
                 </div>
-                
-                
+                <div class="datos">
+                    <input type="text" placeholder="Bogotá, Colombia">
+                </div>
+                <div class="datos">
+                    <input type="text" placeholder="Cll 78D #110-84">
+                </div>
                 <a id="guardarCambios" class="save-button" href="#">
                     Guardar cambios
                 </a>
-
                 <p></p>
             </div>
-
         </div>
-     <!-- Ventana emergente -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Términos y Condiciones</h2>
-            <p>Acepto los términos y condiciones de tratamiento de datos.</p>
-            <a href="#">Leer más</a>
-            <p></p>
-            <div>
-                <input type="checkbox" id="aceptarTerminos">
-                <label for="aceptarTerminos">He leído y acepto los términos y condiciones</label>
+        <!-- Ventana emergente -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal1">&times;</span>
+                <h2>Términos y Condiciones</h2>
+                <p>Acepto los términos y condiciones de tratamiento de datos.</p>
+                <a href="#" id="leerMas">Leer más</a>
+                <p></p>
+                <div>
+                    <input type="checkbox" id="aceptarTerminos">
+                    <label for="aceptarTerminos">He leído y acepto los términos y condiciones</label>
+                </div>
+                <button id="aceptar" class="save-button">Aceptar</button>
+                <button id="rechazar" class="save-button">Rechazar</button>
             </div>
-            <button id="aceptar" class="save-button">Aceptar</button>
         </div>
-    </div>
-      
-  
+    
+        <!-- Segundo Modal: Términos y condiciones completos -->
+        <div id="termsModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal2">&times;</span>
+                <h2>Términos y Condiciones Completos</h2>
+                <div class="terms-content">
+                    <p>Al utilizar nuestra plataforma de compra y venta de productos, aceptas que tus datos personales sean tratados conforme a los términos descritos a continuación:</p>
+    
+                    <h2>1. Datos recopilados</h2>
+                    <p>Al registrarte en nuestra plataforma, recopilamos información como tu nombre,
+                     correo electrónico, dirección de envío, número de teléfono e información de pago. 
+                     También utilizamos cookies y tecnologías similares para mejorar tu experiencia en el sitio.</p>
+    
+                    <h2>2. Uso de tus datos</h2>
+                    <p>Utilizamos tu información para procesar y gestionar compras y ventas, 
+                    facilitar la comunicación entre usuarios, enviarte notificaciones relacionadas con tus 
+                    transacciones y, ocasionalmente, ofrecerte promociones o mejoras en nuestros servicios.</p>
+    
+                    <h2>3. Compartición de datos</h2>
+                    <p>Solo compartimos tus datos cuando es estrictamente necesario, 
+                    como con proveedores de pago para procesar transacciones, 
+                    empresas de mensajería para el envío de productos, 
+                    o autoridades legales si la ley lo requiere.</p>
+    
+                    <h2>4. Seguridad de la información</h2>
+                    <p>Nos comprometemos a proteger tu información mediante medidas de seguridad que 
+                    eviten accesos no autorizados, pérdidas o alteraciones.</p>
+    
+                    <h2>5. Tus derechos</h2>
+                    <p>En cualquier momento, puedes solicitar el acceso, la corrección o 
+                    la eliminación de tus datos personales, así como la suspensión del envío de 
+                    comunicaciones promocionales. Puedes retirar tu consentimiento para el tratamiento de datos 
+                    salvo en casos donde sea necesario para cumplir con nuestras obligaciones legales o 
+                    contractuales.</p>
+    
+                    <h2>6. Uso de cookies</h2>
+                    <p>Este sitio utiliza cookies para personalizar tu experiencia y analizar el uso de nuestra 
+                    plataforma. Puedes desactivar las cookies desde la configuración de tu navegador, 
+                    aunque algunas funciones podrían verse afectadas.</p>
+    
+                    <h2>7. Modificaciones a los términos</h2>
+                    <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. 
+                    Si realizamos cambios importantes, te lo notificaremos a través de la plataforma o 
+                    por correo electrónico.</p>
+    
+                    <p><strong>Al utilizar esta plataforma, confirmas que has leído y aceptado estos términos y condiciones.</strong></p>
+                </div>
+                <div>
+                    <input type="checkbox" id="aceptarTerminosCompletos">
+                    <label for ="aceptarTerminosCompletos">He leído y acepto los términos y condiciones completos</label>
+                </div>
+                <button id="aceptarCompletos" class="save-button">Aceptar</button>
+                <button id="rechazarCompletos" class="save-button">Rechazar</button>
+            </div>
+        </div>
     </div> <!-- fin margenes generales-->
 
     <footer>

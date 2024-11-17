@@ -141,6 +141,11 @@
     .link{
         font-size: .9em;
         color: #2D3773;
+        background: none;
+        border: none;
+        text-decoration: underline
+        ;
+        
     }
     #iniciarsesiongoogle{
         display: flex;
@@ -507,6 +512,9 @@ h2{
     text-decoration: none;
 }
 
+
+
+
 .notification {
     display: flex;
     flex-direction: column; /* Alinea los elementos en columna */
@@ -744,4 +752,13 @@ h2{
 h3 {
     color: #2D3773;
     text-align: left;
+}
+.terms-content {
+    max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+    margin-bottom: 20px; /* Espacio entre el contenido y el checkbox */
+    padding: 10px; /* Espacio interno */
+    border: 1px solid #ccc; /* Borde opcional */
+    background-color: #f9f9f9; /* Color de fondo opcional */
+    color:#000000;
 }

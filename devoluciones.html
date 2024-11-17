@@ -44,52 +44,66 @@
     <div class="margenes_generales">
         <div class="ocho">
             <div class="cuadro-fondo">
-                <div > <h1 class="registro">Solicitud de devolución</h1></div>
-                    
-                    <div class="datos">
-                        <input type="text" placeholder="Nombre" required>
-                    </div>
-                    <div class="datos">
-                        <input type="text" placeholder="Apellido" required>
-                    </div>
-                    <div class="datos">
-                        <input type="email" placeholder="E-mail" required>
-                    </div>
-                    <div class="datos">
-                        <label for="foto">Foto del Producto:</label>
-                        <input type="file" id="foto" accept="image/*" required>
-                    </div>
-                    <div class="datos">
-                        <input type="text" placeholder="Número de Pedido" required>
-                    </div>
-                    <div class="datos">
-                        <input type="date" placeholder="Fecha de Compra" required>
-                    </div>
-                    <div class="datos">
-                        <label for="motivo">Motivo de la Devolución:</label>
-                        <select id="motivo" required>
-                            <option value="" disabled selected>Seleccione un motivo</option>
-                            <option value="producto_dañado">Producto Dañado</option>
-                            <option value="no_conforme">No Conforme</option>
-                            <option value="error_en_envio">Error en el Envío</option>
-                            <option value="cambio_de_idea">Cambio de Idea</option>
-                        </select>
-                    </div>
-                    <div class="datos">
-                        <textarea placeholder="Comentarios Adicionales" rows="4"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="save-button" onclick="showNotification()">Enviar Solicitud</button>
+                <div>
+                    <h1 class="registro">Solicitud de devolución</h1>
+                </div>
+        
+                <div class="datos">
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="datos">
+                    <input type="text" placeholder="Apellido" required>
+                </div>
+                <div class="datos">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                </div>
+                <div class="datos">
+                    <label for="foto">Foto del Producto:</label>
+                    <input type="file" id="foto" accept="image/*" required>
+                </div>
+                <div class="datos">
+                    <input type="text" id="numeroPedido" placeholder="Número de Pedido" required>
+                </div>
+                <div class="datos">
+                    <input type="date" id="fechaCompra" placeholder="Fecha de Compra" required>
+                </div>
+                <div class="datos">
+                    <label for="motivo">Motivo de la Devolución:</label>
+                    <select id="motivo" required>
+                        <option value="" disabled selected>Seleccione un motivo</option>
+                        <option value="producto_dañado">Producto Dañado</option>
+                        <option value="no_conforme">No Conforme</option>
+                        <option value="error_en_envio">Error en el Envío</option>
+                        <option value="cambio_de_idea">Cambio de Idea</option>
+                    </select>
+                </div>
+                <div class="datos">
+                    <textarea placeholder="Comentarios Adicionales" rows="4"></textarea>
+                </div>
+        
+                <button type="submit" class="save-button" onclick="showNotification()">Enviar Solicitud</button>
                 <p></p>
             </div>
         </div>
+        
         <!-- Notificación -->
         <div id="notification" class="notification" style="display: none;">
             <span class="close" onclick="closeNotification()">&times;</span>
-            <span class="notification-text">La solicitud de devolución fue enviada con éxito.
-                <br> Al correo registrado le será informado el resultado de su solicitud y el proceso a seguir.
+            <span class="notification-text">
+                <div class="terms-content">
+                    <strong>La solicitud de devolución fue enviada con éxito.</strong>
+                    <br> <br>Al correo registrado le será informado el resultado de su solicitud y el proceso a seguir.
+                    <br> <br>A continuación se muestra la información de su solicitud:<br><br>
+                    <div id="infoSolicitud"></div> <!-- Aquí se mostrará la información -->
+                </div>
             </span>
         </div>
+        
+        <script>
+      
+        </script>
+        
+     
     </div> <!-- fin margenes generales-->
 
     <footer>

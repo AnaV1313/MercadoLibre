@@ -25,16 +25,36 @@ window.onclick = function(event) {
     }
 }
 
-// Cuando el usuario hace clic en el botón "Aceptar", cerrar el modal
-document.getElementById("aceptar").onclick = function() {
-    modal.style.display = "none"; // Oculta el modal
-    // Aquí puedes agregar la lógica para continuar con el guardado de cambios
-    // Por ejemplo, redirigir a otra página o enviar el formulario
-}
+
 
 function showNotification() {
     // Muestra la notificación
     document.getElementById("notification").style.display = "flex";
+}
+function showNotification() {
+    // Obtener los valores de los campos
+    const email = document.getElementById('email').value;
+    const numeroPedido = document.getElementById('numeroPedido').value;
+    const fechaCompra = document.getElementById('fechaCompra').value;
+    const motivo = document.getElementById('motivo').value;
+
+    // Crear un texto con la información ingresada
+    const infoText = `
+        <strong>Correo:</strong> ${email}<br>
+        <strong>Número de Pedido:</strong> ${numeroPedido}<br>
+        <strong>Fecha de Compra:</strong> ${fechaCompra}<br>
+        <strong>Motivo de la Devolución:</strong> ${motivo}
+    `;
+
+    // Mostrar la información en la notificación
+    document.getElementById('infoSolicitud').innerHTML = infoText;
+
+    // Mostrar la notificación
+    document.getElementById('notification').style.display = 'block';
+}
+
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
 }
 
 function closeNotification() {
@@ -42,3 +62,78 @@ function closeNotification() {
     document.getElementById("notification").style.display = "none";
 }
 
+
+
+ // Función para abrir el modal
+function openModal(modal) {
+    modal.style.display = "block";
+}
+
+// Función para cerrar el modal
+function closeModal(modal) {
+    modal.style.display = "none";
+}
+
+const modal1 = document.getElementById('myModal');
+const termsModal = document.getElementById('termsModal');
+
+// Evento para cerrar el primer modal
+document.getElementById('closeModal1').addEventListener('click', function() {
+    closeModal(modal1);
+});
+
+// Evento para abrir el segundo modal al hacer clic en "Leer más"
+document.getElementById('leerMas').addEventListener('click', function(event) {
+    event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+    closeModal(modal1); // Cerrar el primer modal
+    openModal(termsModal); // Abrir el segundo modal
+});
+
+// Lógica para aceptar en el primer modal
+document.getElementById('aceptar').addEventListener('click', function() {
+    const checkbox = document.getElementById('aceptarTerminos');
+    if (checkbox.checked) {
+        alert('Términos aceptados');
+        closeModal(modal1);
+    } else {
+        alert('Por favor, acepta los términos y condiciones para continuar.');
+    }
+});
+
+// Lógica para rechazar en el primer modal
+document.getElementById('rechazar').addEventListener('click', function() {
+    alert('Términos rechazados');
+    clearInputFields(); // Llama a la función para limpiar los campos
+    closeModal(modal1);
+});
+
+// Evento para cerrar el segundo modal
+document.getElementById('closeModal2').addEventListener('click', function() {
+    closeModal(termsModal);
+});
+
+// Lógica para aceptar en el segundo modal
+document.getElementById('aceptarCompletos').addEventListener('click', function() {
+    const checkbox = document.getElementById('aceptarTerminosCompletos');
+    if (checkbox.checked) {
+        alert('Términos aceptados');
+        closeModal(termsModal);
+    } else {
+        alert('Por favor, acepta los términos y condiciones para continuar.');
+    }
+});
+
+// Lógica para rechazar en el otro modal
+document.getElementById('rechazarCompletos').addEventListener('click', function() {
+    alert('Términos rechazados');
+    clearInputFields(); // Llama a la función para limpiar los campos
+    closeModal(termsModal);
+});
+
+// Función para limpiar los campos de texto
+function clearInputFields() {
+    const inputs = document.querySelectorAll('.datos input[type="text"]');
+    inputs.forEach(input => {
+        input.value = ''; // Limpia el valor de cada campo de texto
+    });
+}
