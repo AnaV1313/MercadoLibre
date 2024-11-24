@@ -33,17 +33,24 @@ function showNotification() {
 }
 function showNotification() {
     // Obtener los valores de los campos
+    const nombre = document.getElementById('Nombre').value;
+    const contacto = document.getElementById('contacto').value;
     const email = document.getElementById('email').value;
+    const direccion = document.getElementById('direccion').value;
     const numeroPedido = document.getElementById('numeroPedido').value;
     const fechaCompra = document.getElementById('fechaCompra').value;
     const motivo = document.getElementById('motivo').value;
 
     // Crear un texto con la información ingresada
     const infoText = `
+        <strong>Nombre del solicitante:</strong> ${nombre}<br>
+        <strong>Número de contacto:</strong> ${contacto}<br>
         <strong>Correo:</strong> ${email}<br>
+        <strong>Dirección donde se recoge el pedido:</strong> ${direccion}<br>
         <strong>Número de Pedido:</strong> ${numeroPedido}<br>
         <strong>Fecha de Compra:</strong> ${fechaCompra}<br>
         <strong>Motivo de la Devolución:</strong> ${motivo}
+
     `;
 
     // Mostrar la información en la notificación
@@ -132,7 +139,7 @@ document.getElementById('rechazarCompletos').addEventListener('click', function(
 
 // Función para limpiar los campos de texto
 function clearInputFields() {
-    const inputs = document.querySelectorAll('.datos input[type="text"]');
+    const inputs = document.querySelectorAll('.datos input[type="text"], .datos input[type="email"]');
     inputs.forEach(input => {
         input.value = ''; // Limpia el valor de cada campo de texto
     });

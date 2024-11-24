@@ -1,6 +1,6 @@
 
   body{
-      font-family:"Kodchasan", Geneva, Verdana, sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       height: 100%;
@@ -560,7 +560,7 @@ h2{
 }
 .notification-text {
     margin-left: 15px; /* Espacio superior para separar el texto de la X */
-    
+    font-size: 16px;
     
 }
 
