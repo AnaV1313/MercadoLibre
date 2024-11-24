@@ -93,7 +93,7 @@ document.getElementById('leerMas').addEventListener('click', function(event) {
 document.getElementById('aceptar').addEventListener('click', function() {
     const checkbox = document.getElementById('aceptarTerminos');
     if (checkbox.checked) {
-        alert('Términos aceptados');
+       
         closeModal(modal1);
     } else {
         alert('Por favor, acepta los términos y condiciones para continuar.');
@@ -102,7 +102,7 @@ document.getElementById('aceptar').addEventListener('click', function() {
 
 // Lógica para rechazar en el primer modal
 document.getElementById('rechazar').addEventListener('click', function() {
-    alert('Términos rechazados');
+   
     clearInputFields(); // Llama a la función para limpiar los campos
     closeModal(modal1);
 });
@@ -116,7 +116,7 @@ document.getElementById('closeModal2').addEventListener('click', function() {
 document.getElementById('aceptarCompletos').addEventListener('click', function() {
     const checkbox = document.getElementById('aceptarTerminosCompletos');
     if (checkbox.checked) {
-        alert('Términos aceptados');
+        
         closeModal(termsModal);
     } else {
         alert('Por favor, acepta los términos y condiciones para continuar.');
@@ -125,7 +125,7 @@ document.getElementById('aceptarCompletos').addEventListener('click', function()
 
 // Lógica para rechazar en el otro modal
 document.getElementById('rechazarCompletos').addEventListener('click', function() {
-    alert('Términos rechazados');
+    
     clearInputFields(); // Llama a la función para limpiar los campos
     closeModal(termsModal);
 });
