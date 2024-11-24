@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Pagos PSE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px 30px;
+            width: 320px;
+            text-align: center;
+        }
+
+        .header img {
+            width: 120px;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 20px;
+        }
+
+        .form label {
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+
+        .form select, .form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form button {
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form button:hover {
+            background-color: #004699;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="imagenes\banco.jpg" alt="Logo Banco de Bogotá">
+            <h2>Servicio de Pagos Virtuales<br>Pagos PSE</h2>
+        </div>
+        <form class="form">
+            <label for="cliente">¿Qué tipo de cliente eres?</label>
+            <select id="cliente" name="cliente">
+                <option value="" selected>Selecciona</option>
+                <option value="personal">Personal</option>
+                <option value="empresarial">Empresarial</option>
+            </select>
+            <label for="documento">Documento</label>
+            <select id="documento" name="documento">
+                <option value="" selected>Tipo</option>
+                <option value="cc">Cédula de ciudadanía</option>
+                <option value="ce">Cédula de extranjería</option>
+                <option value="nit">NIT</option>
+            </select>
+            <label for="identificacion">Número de Identificación</label>
+            <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa el número">
+            <button type="submit">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>
