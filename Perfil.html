@@ -1,112 +1,112 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercado Libre</title>
-    <link rel="stylesheet" href="Styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mercado Libre</title>
+        <link rel="stylesheet" href="Styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kodchasan:wght@400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-</head>
-<body >
-    <header>
-        <img src="imagenes\mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
-        
-        <div class="search-container">
-            <span class="material-symbols-outlined">
-                search
-                </span>
-            <input type="text" placeholder="Buscar">
-        </div>
-    
-        <div>
-            <a id="a" href="Perfil.html">
-                <span class="material-symbols-outlined">
-                    person
-                    </span>
-            </a>
+    </head>
+    <body >
+        <header>
+            <img src="imagenes\mercado-libre.webp" alt="Logo" class="logo"> <!-- Logo a la izquierda -->
             
-            <span class="material-symbols-outlined">
-                home
-                </span>
-                <a  id="a" href="Pago.html">
+            <div class="search-container">
+                <span class="material-symbols-outlined">
+                    search
+                    </span>
+                <input type="text" placeholder="Buscar">
+            </div>
+        
+            <div>
+                <a id="a" href="Perfil.html">
                     <span class="material-symbols-outlined">
-                        shopping_cart
+                        person
                         </span>
                 </a>
-           
+                
+                <span class="material-symbols-outlined">
+                    home
+                    </span>
+                    <a  id="a" href="Pago.html">
+                        <span class="material-symbols-outlined">
+                            shopping_cart
+                            </span>
+                    </a>
+            
+            </div>
+        </header>
+
+        <!-- Contenido principal con la barra lateral y la columna de perfil -->
+        <div class="container">
+            <!-- Barra lateral -->
+            <aside class="sidebar">
+                <h2>Menú</h2>
+                <a href="#"><span>📦</span> <span>Compras</span></a>
+            <a href="#"><span>📈</span> <span>Ventas</span></a>
+            <a href="#"><span>📅</span> <span>Suscripciones</span></a>
+            <a href="#"><span>💳</span> <span>Facturación</span></a>
+            <a href="#"><span>⚙️</span> <span>Configuración</span></a>
+            </aside>
+
+            <!-- Columna principal -->
+            <main class="main-content">
+                <section class="profile-header">
+                    <div class="avatar">LP</div>
+                    <div>
+                        <h1>Laura Penagos</h1>
+                    <p>laura.penagos@vamosapasargerencia.com</p>
+                    <p>Estás en nivel 1 - Mercado Puntos</p>
+                    </div>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Datos de tu cuenta</h3>
+                <p><span class="icon">👤</span> Datos que representan a la cuenta en Mercado Libre y Mercado Pago.</p>
+                <a href="cambiodatos.html" class="edit-link">Editar</a>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Historial de Compras</h3>
+                    <p>No tienes compras recientes.</p>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Denuncias</h3>
+                    <p><span class="icon">⚠️</span> Aquí encontrarás las opciones para gestionar tus denuncias.</p>
+                    <a href="Denuncias.html" class="edit-link">Ir</a>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Devoluciones</h3>
+                <p><span class="icon">🔄</span> Opciones para ver y gestionar tus devoluciones.</p>
+                <a href="devoluciones.html" class="edit-link">Ir</a>
+                </section>
+
+                <section class="profile-section">
+                    <h3>Verificación de Identidad</h3>
+                    <p><span class="icon">🆔</span> Verifica tu identidad para aumentar la seguridad de tu cuenta.</p>
+                    <a href="Identidad.html" class="edit-link">Ir</a>
+            </main>
         </div>
-    </header>
 
-    <!-- Contenido principal con la barra lateral y la columna de perfil -->
-    <div class="container">
-        <!-- Barra lateral -->
-        <aside class="sidebar">
-            <h2>Menú</h2>
-            <a href="#"><span>📦</span> <span>Compras</span></a>
-        <a href="#"><span>📈</span> <span>Ventas</span></a>
-        <a href="#"><span>📅</span> <span>Suscripciones</span></a>
-        <a href="#"><span>💳</span> <span>Facturación</span></a>
-        <a href="#"><span>⚙️</span> <span>Configuración</span></a>
-        </aside>
+    <!-- Footer -->
+    <footer>
+        <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
+        
+        <div class="footer-links">
+            <a href="#politicas">Políticas de Privacidad</a>
+            <a href="#terminos">Términos y Condiciones</a>
+            <a href="#contacto">Contacto</a>
+        </div>
 
-        <!-- Columna principal -->
-        <main class="main-content">
-            <section class="profile-header">
-                <div class="avatar">LP</div>
-                <div>
-                    <h1>Laura Penagos</h1>
-                <p>laura.penagos@vamosapasargerencia.com</p>
-                <p>Estás en nivel 1 - Mercado Puntos</p>
-                </div>
-            </section>
-
-            <section class="profile-section">
-                <h3>Datos de tu cuenta</h3>
-            <p><span class="icon">👤</span> Datos que representan a la cuenta en Mercado Libre y Mercado Pago.</p>
-            <a href="cambiodatos.html" class="edit-link">Editar</a>
-            </section>
-
-            <section class="profile-section">
-                <h3>Historial de Compras</h3>
-                <p>No tienes compras recientes.</p>
-            </section>
-
-            <section class="profile-section">
-                <h3>Denuncias</h3>
-                <p><span class="icon">⚠️</span> Aquí encontrarás las opciones para gestionar tus denuncias.</p>
-                <a href="Denuncias.html" class="edit-link">Ir</a>
-            </section>
-
-            <section class="profile-section">
-                <h3>Devoluciones</h3>
-            <p><span class="icon">🔄</span> Opciones para ver y gestionar tus devoluciones.</p>
-            <a href="devoluciones.html" class="edit-link">Ir</a>
-            </section>
-
-            <section class="profile-section">
-                <h3>Verificación de Identidad</h3>
-                <p><span class="icon">🆔</span> Verifica tu identidad para aumentar la seguridad de tu cuenta.</p>
-                <a href="Identidad.html" class="edit-link">Ir</a>
-        </main>
+        <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
+    </footer>
     </div>
 
-  <!-- Footer -->
-  <footer>
-    <img src="imagenes/MELI-ec0c0e4f.png" alt="Logo" class="footer-logo"> <!-- Logo centrado -->
-    
-    <div class="footer-links">
-        <a href="#politicas">Políticas de Privacidad</a>
-        <a href="#terminos">Términos y Condiciones</a>
-        <a href="#contacto">Contacto</a>
-    </div>
-
-    <div class="footer-text">© 2023 Mercado Libre. Todos los derechos reservados.</div> <!-- Texto de derechos de autor -->
-</footer>
-</div>
-
-</body>
-</html>
+    </body>
+    </html>
