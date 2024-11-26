@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Pago</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+        .logo {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-height: 50px;
+        }
+        .success-icon {
+            color: #28a745;
+            font-size: 50px;
+        }
+        .title {
+            font-size: 24px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .details {
+            text-align: left;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #555;
+        }
+        .details .amount {
+            font-size: 30px;
+            color: #333;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .download-link {
+            margin-top: 20px;
+            display: inline-block;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .download-link:hover {
+            text-decoration: underline;
+        }
+        .continue-button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .continue-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="" alt="">
+        </div>
+        <div class="success-icon">✔</div>
+        <div class="title">Pagos PSE<br><strong>Pago exitoso</strong></div>
+        <p>"Su transacción ha sido exitosa."</p>
+        <div class="details">
+            <p>Pagado desde: Cuenta de ahorros ****************3636</p>
+            <p>Número de autorización: <strong>635202</strong></p>
+            <p>Pagado a: <strong>Mercado Libre</strong></p>
+            <p>Número de Factura: <strong>247822288173171851</strong></p>
+           
+            <p class="amount">$65.805</p>
+            <p>Valor Impuesto: $0.00</p>
+        </div>
+        <a href="#" class="download-link">Descargar el comprobante</a>
+        <br>
+        <a href="CompraFinal.html" class="continue-button">Continuar</a>
+    </div>
+</body>
+</html>
